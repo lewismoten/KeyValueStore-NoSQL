@@ -59,10 +59,12 @@ function getInput() {
 		exit;
 	}
 
-	if(strlen($pair->value) > 1024) {
+	if(isset($pair->value)) {
+		if(strlen($pair->value) > 1024) {
 
-		showError('value is too long');
-		exit;
+			showError('value is too long');
+			exit;
+		}
 	}
 
 	return $pair;
