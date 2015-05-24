@@ -66,6 +66,9 @@ function post(url, data, callbackSuccess) {
 
 	request.open('POST', url, true);
 
+	// Hack to get around servers that only support this mime type
+	request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
 	request.onerror = onError;
 	request.onabort = onError;
 	request.ontimeout = onError;
