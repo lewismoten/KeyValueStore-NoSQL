@@ -68,6 +68,9 @@ function getInput() {
 	}
 
 	if(isset($pair->value)) {
+
+		$pair->value = trim($pair->value);
+
 		if(strlen($pair->value) > 1024) {
 
 			showError('value is too long');
