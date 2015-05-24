@@ -66,6 +66,8 @@ The response:
 #Setting things up
 Rename the configuration.example.php file and setup the connection credentials.
 Run the schema.sql file to create the database table
+To support raw post data, you will need to set you php.ini file
+* always_populate_raw_post_data = -1
 
 Note: This is essentially a public database that anyone can update. There are no security restrictions in place for people retrieving and updating content.
 
