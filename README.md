@@ -74,6 +74,7 @@ Note: This is essentially a public database that anyone can update. There are no
 
 The following rules are in place:
 * Keys can not be more than 255 characters in length
+* Zero-Length keys are not allowed
 * Values can not be more than 1024 characters in length
 * Pages only respond to "POST" methods
 * Posted data can not contain more than 2048 characters
