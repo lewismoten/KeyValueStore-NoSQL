@@ -107,6 +107,8 @@ function showError($message) {
 	$error->message = $message;
 
 	echo json_encode($error);
+
+	die();
 }
 
 function showPair($key, $value) {
