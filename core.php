@@ -63,22 +63,21 @@ function openDatabase() {
 
 	if($db->connect_error) {
 
-		showError($db->connect_error());
-		//showError('database connection failed');
+		showError('database connection failed');
 		exit;
 	}
 
 	if($db->connect_errno) {
 
 		showError($db->connect_errno());
-		//showError('database connection failed');
+		showError('database connection failed');
 		exit;
 	}
 
 	if($db->error) {
 
 		showError($db->error());
-		//showError('database connection failed');
+		showError('database connection failed');
 		exit;
 	}
 
