@@ -17,7 +17,6 @@ function validateRequest() {
 		exit;
 	}
 
-
 	$size = (int) $_SERVER['CONTENT_LENGTH'];
 
 	if($size > 2048) {
