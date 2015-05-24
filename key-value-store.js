@@ -26,7 +26,7 @@ function getValue(key) {
 		value: undefined
 	};
 
-	post('get', JSON.stringify(pair), function(data) {
+	post('get.php', JSON.stringify(pair), function(data) {
 
 		if(data.success === true) {
 			showValue(data.value);
@@ -45,7 +45,7 @@ function setValue(key, value) {
 		value: value
 	};
 
-	post('set', JSON.stringify(pair));
+	post('set.php', JSON.stringify(pair));
 
 }
 
