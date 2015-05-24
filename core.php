@@ -59,6 +59,14 @@ function getInput() {
 		exit;
 	}
 
+	$pair->key = trim($pair->key);
+
+	if(strlen($pair->key) <= 1) {
+
+		showError('key is too short');
+		exit;
+	}
+
 	if(isset($pair->value)) {
 		if(strlen($pair->value) > 1024) {
 
