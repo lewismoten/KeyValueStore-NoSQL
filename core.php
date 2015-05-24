@@ -1,6 +1,13 @@
 <?php
 include 'configuration.php';
 
+error_reporting(E_ERROR);
+set_error_handler("onError", E_ALL);
+
+function onError($number, $message, $file, $line) {
+	showError($message);
+}
+
 function validateRequest() {
 
 	$method = $_SERVER['REQUEST_METHOD'];
