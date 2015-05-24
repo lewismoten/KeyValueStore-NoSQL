@@ -48,6 +48,11 @@ function getInput() {
 
 	}
 
+	if(!isset($pair->key)) {
+		showError('must provide key');
+		exit;
+	}
+
 	if(strlen($pair->key) > 255) {
 
 		showError('key is too long');
