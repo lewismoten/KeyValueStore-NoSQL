@@ -22,7 +22,6 @@ $reader = $db->query($query);
 
 if($reader === false) {
 
-	//showError($db->error);
 	showError('error querying against database');
 	exit;
 
