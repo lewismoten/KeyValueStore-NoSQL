@@ -1,0 +1,47 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Key/Value Store</title>
+        <meta name="description" content="Store and retrieve values from a Key/Value Store NoSQL database.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="text/javascript" src="key-value-store.js"></script>
+    </head>
+    <body>
+    	<h1>Key/Value Store</h1>
+		<p>
+			Key:
+			<input type="text" id="keyTextBox">
+			<button onclick="getValue(keyTextBox.value)">Get Value</button>
+		</p>
+		<p>
+			Value:
+			<input type="text" id="valueTextBox" />
+			<button onclick="setValue(keyTextBox.value, valueTextBox.value)">Set Value</button>
+		</p>
+
+		<p>
+			Status: <label id="statusLabel">Ready</label>
+		</p>
+
+		<table width="100%">
+			<thead>
+				<tr>
+					<td width="50%">Request</td>
+					<td>Response</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<code id="requestCode">None</code>
+					</td>
+					<td>
+						<code id="responseCode">None</code>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

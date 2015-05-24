@@ -1,0 +1,4 @@
+RewriteEngine On 
+RewriteBase /key-value-store
+RewriteRule get get.php
+RewriteRule set set.php
