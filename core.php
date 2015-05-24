@@ -58,7 +58,6 @@ function getInput() {
 
 function openDatabase() {
 
-	//$db = new mysqli('fdb7.awardspace.net', '1881769_fascicle', 'W2AZoyycf3cmgVdjod?', '1881769_fascicle');
 	$db = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
 	if($db->connect_error) {
