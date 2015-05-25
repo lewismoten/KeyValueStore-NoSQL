@@ -60,7 +60,7 @@ function getInput() {
 
 	$pair->key = trim($pair->key);
 
-	if(strlen($pair->key) <= 1) {
+	if(strlen($pair->key) <= 0) {
 
 		showError('key is too short');
 		exit;
