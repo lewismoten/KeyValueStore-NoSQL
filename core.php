@@ -68,7 +68,7 @@ function getInput() {
 
 	if(isset($pair->value)) {
 
-		$pair->value = trim($pair->value);
+		$pair->value = $pair->value;
 
 		if(strlen($pair->value) > 1024) {
 
