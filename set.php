@@ -19,6 +19,20 @@ on duplicate key update
 	`key` = values(`key`),
 	`value` = values(`value`);
 
+delete `keyvaluestore`
+from 
+  `keyvaluestore`
+left join
+  (
+    select `key`
+    from `keyvaluestore`
+    order by `modified` desc
+    limit 500
+  ) as `keep`
+on `keyvaluestore`.`key`= `keep`.`key`
+where
+  `keep`.`key` is null;
+
 OPTIMIZE TABLE  `keyvaluestore`;
 	", 
 	$db->real_escape_string($pair->key),

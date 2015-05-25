@@ -80,6 +80,7 @@ The following rules are in place:
 * Pages only respond to "POST" methods
 * Posted data can not contain more than 2048 characters
 * The posted content must be a JSON object
+* Only the most recent 500 modified keys are stored
 
 The following actions happen:
 * the returned content type is application/json
