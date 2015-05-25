@@ -19,11 +19,12 @@ on duplicate key update
 	`key` = values(`key`),
 	`value` = values(`value`);
 
+OPTIMIZE TABLE  `keyvaluestore`;
 	", 
 	$db->real_escape_string($pair->key),
 	$db->real_escape_string($pair->value));
 
-$reader = $db->query($query);
+$reader = $db->multi_query($query);
 
 if($reader === false) {
 
