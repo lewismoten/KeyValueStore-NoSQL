@@ -80,5 +80,8 @@ The following rules are in place:
 * Pages only respond to "POST" methods
 * Posted data can not contain more than 2048 characters
 * The posted content must be a JSON object
+
+The following actions happen:
 * the returned content type is application/json
 * The headers are setup to prevent the values from being cached
+* The table is optimized when a key value is set
