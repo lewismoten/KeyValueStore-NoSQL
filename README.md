@@ -1,3 +1,5 @@
+![KeyValueStore-NoSQL: Key/value store over PHP and MySQL](docs/images/social-preview.png)
+
 # Key/ValueStore-NoSQL
 
 This is a Key/Value Store, also known as a NoSQL database. It is written using PHP & hosted on a MySQL database.
